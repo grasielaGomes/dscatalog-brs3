@@ -3,7 +3,7 @@ package com.damaprodutora.DsCatalog.dto;
 import com.damaprodutora.DsCatalog.services.validation.UserInsertValid;
 
 @UserInsertValid
-public class UserInsertDTO extends UserDTO{
+public class UserInsertDTO extends UserDTO {
 
 	private static final long serialVersionUID = 1L;
 	

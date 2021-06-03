@@ -16,7 +16,7 @@ public class UserDTO implements Serializable{
 	
 	private Long id;
 	
-	@Size(min = 3, max = 40, message = "O nome deve ter no mínimo 3 e no máximo 40 letras")
+	@Size(min = 3, max = 40, message = "O nome deve ter no mínimo 3 e no máximo 40 caracteres")
 	@NotBlank(message = "Campo obrigatório")
 	private String firstName;
 	private String lastName;
