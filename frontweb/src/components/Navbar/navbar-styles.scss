@@ -7,7 +7,7 @@ div {
     &:hover {
       color: rgb(13, 32, 52);
     }
-    @media (max-width: 770px) {
+    @media (max-width: 768px) {
       margin-left: 0.5rem;
     }
   }
@@ -35,7 +35,7 @@ div {
     margin-right: 4rem;
     gap: 2rem;
 
-    @media (max-width: 770px) {
+    @media (max-width: 768px) {
       gap: 0.2rem;
       margin-left: 0.5rem;
     }
