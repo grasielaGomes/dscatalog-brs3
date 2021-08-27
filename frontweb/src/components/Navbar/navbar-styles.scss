@@ -1,0 +1,35 @@
+div {
+  .nav-logo-text {
+    margin-left: 4rem;
+    color: white;
+    transition: color 300ms;
+
+    &:hover {
+      color: rgb(13, 32, 52);
+    }
+  }
+
+  ul {
+    a {
+      color: aliceblue;
+      transition: color 300ms;
+
+      &:hover {
+      color: rgb(13, 32, 52);
+
+      &:active {
+        color: aliceblue;
+        font-weight: 700;
+      }
+    }
+    }
+  }
+
+  .main-menu {
+    display: flex;
+    width: 100%;
+    justify-content:flex-end;
+    margin-right: 4rem;
+    gap: 2rem;
+  }
+}

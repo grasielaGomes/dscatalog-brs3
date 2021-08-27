@@ -1,11 +1,13 @@
+import './navbar-styles.scss';
+
 const Navbar = () => (
-  <nav className="bg-primary">
-    <div>
+  <nav className="bg-primary navbar navbar-expand-md">
+    <div className="container-fluid">
       <a href="link">
-        <h4>DS Catalog</h4>
+        <h4 className="nav-logo-text">DS Catalog</h4>
       </a>
-      <div>
-        <ul>
+      <div className="collapse navbar-collapse">
+        <ul className="navbar-nav main-menu">
           <li>
             <a href="link">HOME</a>
           </li>
