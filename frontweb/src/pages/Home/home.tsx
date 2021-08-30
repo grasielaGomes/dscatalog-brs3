@@ -1,13 +1,13 @@
-import Navbar from '../../components/Navbar/navbar';
-import homeImg from '../../assets/images/homeImg.svg';
-import ButtonIcon from '../../components/ButtonIcon/button-icon';
+import Navbar from 'components/Navbar/navbar';
+import homeImg from 'assets/images/homeImg.svg';
+import ButtonIcon from 'components/ButtonIcon/button-icon';
 import './home-styles.scss';
 
 const Home = () => (
   <>
     <Navbar />
     <div className="home-container">
-      <main>
+      <main className="base-card">
         <section>
           <img src={homeImg} alt="" />
         </section>

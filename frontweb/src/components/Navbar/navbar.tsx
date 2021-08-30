@@ -3,7 +3,7 @@ import 'bootstrap/js/src/collapse.js';
 
 const Navbar = () => (
   <nav className="bg-primary navbar navbar-expand-md navbar-dark">
-    <div className="container-fluid">
+    <div className="container container-fluid">
       <a href="link">
         <h4 className="nav-logo-text">DS Catalog</h4>
       </a>

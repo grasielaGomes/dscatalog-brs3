@@ -1,0 +1,18 @@
+.product-card {
+  width: fit-content;
+  margin: 1rem auto;
+
+  .card-top-container {
+    border-bottom: 1px solid rgb(227, 226, 226);
+    text-align: center;
+    
+    img {
+      width: 60%;
+      padding: 1rem 0;
+    }
+  }
+
+  .card-bottom-container {
+    padding: 1rem;
+    }
+}
