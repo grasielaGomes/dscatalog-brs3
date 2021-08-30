@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar/navbar';
 import homeImg from '../../assets/images/homeImg.svg';
+import ButtonIcon from '../../components/ButtonIcon/button-icon';
 import './home-styles.scss';
 
 const Home = () => (
@@ -16,12 +17,7 @@ const Home = () => (
             Ajudaremos você a encontrar os melhores produtos disponíveis no
             mercado.
           </p>
-        </section>
-        <section>
-          <button>
-            <span>INICIE AGORA A SUA BUSCA</span>
-            <span>go</span>
-          </button>
+          <ButtonIcon />
         </section>
       </main>
     </div>

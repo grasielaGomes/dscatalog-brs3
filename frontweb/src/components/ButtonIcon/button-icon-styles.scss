@@ -1,0 +1,26 @@
+
+    .btn-container {
+      max-width: 70vw;
+      display: flex;
+      justify-content: center;
+      transition: filter 300ms;
+
+       &:hover {
+          filter: brightness(1.3);
+        }
+
+      .btn-text, .btn-icon {
+        color:aliceblue;
+        padding: 0.5rem 1rem;    
+      }
+      
+      .btn-text {
+        font-weight: bold;
+        border-radius: 0.2rem 0 0 0.2rem;
+      }
+
+      .btn-icon {
+        border-radius: 0 0.2rem 0.2rem 0;
+        background-color: rgb(20, 42, 84);
+      }
+    }
