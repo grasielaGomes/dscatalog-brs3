@@ -4,8 +4,6 @@ import ButtonIcon from 'components/ButtonIcon/button-icon';
 import './home-styles.scss';
 
 const Home = () => (
-  <>
-    <Navbar />
     <div className="home-container">
       <main className="base-card">
         <section>
@@ -21,7 +19,6 @@ const Home = () => (
         </section>
       </main>
     </div>
-  </>
 );
 
 export default Home;
