@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 import './button-icon-styles.scss';
 
-const ButtonIcon = () => {
+type Props = {
+  text: string;
+};
+
+const ButtonIcon = ({ text }: Props) => {
   return (
     <div className="btn-container">
       <Link to="/products">
         <button className="btn btn-primary btn-text">
-          INICIE AGORA SUA BUSCA
+          {text}
         </button>
         <button className="btn btn-icon">&#10095;</button>
       </Link>
