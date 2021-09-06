@@ -17,7 +17,7 @@ div {
     justify-content: flex-end;
     gap: 2rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       gap: 0.2rem;
     }
 
