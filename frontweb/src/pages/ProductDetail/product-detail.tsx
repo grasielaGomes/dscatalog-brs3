@@ -1,17 +1,20 @@
 import productImg from 'assets/images/product.png';
 import { ProductPrice } from 'components/ProductPrice/product-price';
+import { Link } from 'react-router-dom';
 
 export const ProductDetail = () => {
   return (
     <div className="container">
       <main className="base-card mt-3 p-3 p-md-4">
-        <header>
-          <button type="button" className="btn btn-light my-3 mt-md-0">
-            <span className="text-primary me-2">&#10094;</span>
-            <strong className="text-uppercase">voltar</strong>
-          </button>
+        <header className="ms-n2 ms-sm-n1">
+          <Link to="/products">
+            <button type="button" className="btn btn-light my-3 mt-md-0">
+              <span className="text-primary me-2">&#10094;</span>
+              <strong className="text-uppercase">voltar</strong>
+            </button>
+          </Link>
         </header>
-        <div className="d-flex flex-column flex-lg-row gap-lg-4">
+        <div className="d-flex flex-column flex-lg-row gap-lg-4 px-sm-2">
           <section className="w-100">
             <div className="d-grid border rounded mb-3">
               <div className="col-md-6 col-lg-8 mx-auto p-3">

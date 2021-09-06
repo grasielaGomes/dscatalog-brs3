@@ -1,8 +1,8 @@
 import { ProductCard } from 'components/ProductCard/product-card';
+import { Link } from 'react-router-dom';
 import { Product } from 'types/product';
 
 const Catalog = () => {
-
   const product: Product = {
     id: 2,
     name: 'Smart TV',
@@ -25,25 +25,35 @@ const Catalog = () => {
   };
 
   return (
-      <main className="container">
-        <div className="row justify-content-center justify-content-sm-start">
-          <div className="col-auto col-sm-6 col-md-4 col-lg-3">
+    <main className="container">
+      <div className="row justify-content-center justify-content-sm-start">
+        <div className="col-auto col-sm-6 col-md-4 col-lg-3">
+          <Link to="/products/1">
             <ProductCard product={product} />
-          </div>
-          <div className="col-auto col-sm-6 col-md-4 col-lg-3">
-            <ProductCard product={product} />
-          </div>
-          <div className="col-auto col-sm-6 col-md-4 col-lg-3">
-            <ProductCard product={product} />
-          </div>
-          <div className="col-auto col-sm-6 col-md-4 col-lg-3">
-            <ProductCard product={product} />
-          </div>
-          <div className="col-auto col-sm-6 col-md-4 col-lg-3">
-            <ProductCard product={product} />
-          </div>
+          </Link>
         </div>
-      </main>
+        <div className="col-auto col-sm-6 col-md-4 col-lg-3">
+          <Link to="/products/1">
+            <ProductCard product={product} />
+          </Link>
+        </div>
+        <div className="col-auto col-sm-6 col-md-4 col-lg-3">
+          <Link to="/products/1">
+            <ProductCard product={product} />
+          </Link>
+        </div>
+        <div className="col-auto col-sm-6 col-md-4 col-lg-3">
+          <Link to="/products/1">
+            <ProductCard product={product} />
+          </Link>
+        </div>
+        <div className="col-auto col-sm-6 col-md-4 col-lg-3">
+          <Link to="/products/1">
+            <ProductCard product={product} />
+          </Link>
+        </div>
+      </div>
+    </main>
   );
 };
 
