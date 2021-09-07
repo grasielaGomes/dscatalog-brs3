@@ -1,6 +1,7 @@
 import { ProductCard } from 'components/ProductCard/product-card';
 import { Link } from 'react-router-dom';
 import { Product } from 'types/product';
+import Pagination from 'components/Pagination/pagination';
 
 const Catalog = () => {
   const product: Product = {
@@ -56,6 +57,9 @@ const Catalog = () => {
           </Link>
         </div>
       </section>
+      <footer className="d-flex flex-row justify-content-center mt-4">
+        <Pagination />
+      </footer>
     </main>
   );
 };
