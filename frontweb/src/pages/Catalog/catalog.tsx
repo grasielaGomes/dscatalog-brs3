@@ -26,7 +26,10 @@ const Catalog = () => {
 
   return (
     <main className="container">
-      <div className="row justify-content-center justify-content-sm-start">
+      <header className="mt-4">
+        <p className="fs-3 fw-bolder">Catálogo de produtos</p>
+      </header>
+      <section className="row justify-content-center justify-content-sm-start">
         <div className="col-auto col-sm-6 col-md-4 col-lg-3">
           <Link to="/products/1">
             <ProductCard product={product} />
@@ -52,7 +55,7 @@ const Catalog = () => {
             <ProductCard product={product} />
           </Link>
         </div>
-      </div>
+      </section>
     </main>
   );
 };

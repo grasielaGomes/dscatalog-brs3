@@ -1,4 +1,3 @@
-import Navbar from 'components/Navbar/navbar';
 import homeImg from 'assets/images/homeImg.svg';
 import ButtonIcon from 'components/ButtonIcon/button-icon';
 import './home-styles.scss';
