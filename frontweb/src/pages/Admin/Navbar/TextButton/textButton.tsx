@@ -1,26 +1,28 @@
+import { NavLink } from "react-router-dom";
 
 
 
 type Props = {
   text: string;
-  isActive?: boolean;
   isDesktopOrLaptop?: boolean;
+  link: string;
 };
 
-export function TextButton({ text, isActive = false, isDesktopOrLaptop }: Props) {
+export function TextButton({ text, isDesktopOrLaptop , link }: Props) {
 
   return (
-    <a
-      href="link"
-      className={`${
-        isActive
-          ? 'bg-primary bg-opacity-10 text-primary'
-          : `bg-${isDesktopOrLaptop ? 'white' : 'secondary'} text-black-50`
-      } px-3 px-sm-5 py-2 ${
-        isDesktopOrLaptop ? 'rounded-0 py-3 border-bottom w-100' : 'rounded-pill'
+    <NavLink
+      to={link}
+      activeClassName={`bg-primary bg-opacity-10 text-primary border border-primary`}
+      className={`px-3 px-sm-5 py-2 ${
+        isDesktopOrLaptop
+          ? 'rounded-0 py-3 border-bottom border-0'
+          : 'rounded-pill bg-secondary'
       } `}
     >
-      <p className="fw-bolder my-auto">{text}</p>
-    </a>
+      <p className={`fw-bolder my-auto ${isDesktopOrLaptop ? 'mx-5' : ''}`}>
+        {text}
+      </p>
+    </NavLink>
   );
 }
