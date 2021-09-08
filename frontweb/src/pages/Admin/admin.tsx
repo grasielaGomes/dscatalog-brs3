@@ -1,7 +1,7 @@
 import Navbar from './Navbar/navbar';
 export const Admin = () => (
-  <main className="container">
-    <div className="d-flex flex-column flex-lg-row">
+  <main className="container vh-100">
+    <div className="d-flex flex-column flex-lg-row h-100">
       <section>
         <Navbar />
       </section>
