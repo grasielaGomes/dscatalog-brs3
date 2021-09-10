@@ -1,8 +1,19 @@
-import productImg from 'assets/images/product.png';
+import axios from 'axios';
 import { ProductPrice } from 'components/ProductPrice/product-price';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Product } from 'types/product';
+import { BASE_URL } from 'util/requests';
 
 export const ProductDetail = () => {
+  const [product, setProduct] = useState<Product>();
+
+  useEffect(() => {
+    axios.get(BASE_URL + '/products/1').then((response) => {
+      setProduct(response.data);
+    });
+  }, []);
+
   return (
     <div className="container">
       <main className="base-card mt-3 p-3 p-md-4">
@@ -18,28 +29,23 @@ export const ProductDetail = () => {
           <section className="w-100">
             <div className="d-grid border rounded mb-3">
               <div className="col-md-6 col-lg-8 mx-auto p-3">
-                <img src={productImg} alt="product name" className="w-100" />
+                <img
+                  src={product?.imgUrl}
+                  alt={product?.name}
+                  className="w-100"
+                />
               </div>
             </div>
             <article className="d-flex flex-column flex-md-row flex-lg-column">
               <h3 className="col-md-6 col-lg-12 me-md-5 me-lg-0">
-                Computador Desktop - Intel Core i7
+                {product?.name}
               </h3>
-              <ProductPrice price={2779} />
+              <ProductPrice price={product?.price as number} />
             </article>
           </section>
           <section className="border rounded p-3 text-black-50 mt-3 mt-lg-0 col-lg-6">
             <h6>Descrição do produto</h6>
-            <p className="mt-3">
-              Projetado para garantir a produtividade no seu dia a dia O
-              desempenho que você precisa para uma jornada eficiente é garantido
-              pelos processadores Intel da família Core Conectividade ao seu
-              alcance Saídas de áudio com qualidade HD e conexões USB estão
-              dipooníveis na frontal do seu CorPc Baixo consumo Mesmo
-              trabalhando todos os dias, você não tera sustos na conta de
-              energia. Fizemos tudo bem feito, para o seu CorPC seja eficiente,
-              silencioso e econômico no consumo de energia elétrica.
-            </p>
+            <p className="mt-3">{product?.description}</p>
           </section>
         </div>
       </main>
