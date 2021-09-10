@@ -1,18 +1,24 @@
 import axios from 'axios';
-import { ProductPrice } from 'components/ProductPrice/product-price';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Product } from 'types/product';
 import { BASE_URL } from 'util/requests';
+import { ProductPrice } from 'components/ProductPrice/product-price';
+
+type UrlParams = {
+  productId: string;
+}
 
 export const ProductDetail = () => {
+  const { productId } = useParams<UrlParams>();
   const [product, setProduct] = useState<Product>();
 
   useEffect(() => {
-    axios.get(BASE_URL + '/products/1').then((response) => {
+    axios.get(`${BASE_URL}/products/${productId}`).then((response) => {
       setProduct(response.data);
     });
-  }, []);
+    console.log('Called!');
+  }, [productId]);
 
   return (
     <div className="container">
