@@ -4,23 +4,32 @@ import { Link, useParams } from 'react-router-dom';
 import { Product } from 'types/product';
 import { BASE_URL } from 'util/requests';
 import { ProductPrice } from 'components/ProductPrice/product-price';
+import ProductInfoLoader from 'pages/ProductDetail/ProductInfoLoader/productInfoLoader';
 
 type UrlParams = {
   productId: string;
-}
+};
 
 export const ProductDetail = () => {
   const { productId } = useParams<UrlParams>();
   const [product, setProduct] = useState<Product>();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/products/${productId}`).then((response) => {
-      setProduct(response.data);
-    });
-    console.log('Called!');
+    setIsLoading(true);
+    axios
+      .get(`${BASE_URL}/products/${productId}`)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, [productId]);
 
-  return (
+  return isLoading ? (
+    <ProductInfoLoader />
+  ) : (
     <div className="container">
       <main className="base-card mt-3 p-3 p-md-4">
         <header className="ms-n2 ms-sm-n1">
